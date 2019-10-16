@@ -1,0 +1,20 @@
+<form class="col-md-4 offset-4 mt-5 mb-5 card card-body" #form = "ngForm" (ngSubmit) = loginData(form)>
+    <h1>Please Login</h1>
+    <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" #email = "ngModel" ngModel  required  minlength=6>
+        <div *ngIf = "email.touched && email.invalid">
+            <p *ngIf = "email.errors.required" class="alert alert-danger">*This field is required</p>
+            <p *ngIf = "email.errors.minlength" class ="alert alert-danger">*Enter more than 6 characters</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" #password = "ngModel" ngModel  required>
+        <div *ngIf = "password.touched && password.invalid">
+            <p *ngIf = "password.errors.required" class="alert alert-danger">*This field is required</p>
+            <p *ngIf = "password.errors.minlength" class="alert alert-danger">*Enter more than 6 characters</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled] = "form.invalid">Login</button>
+    </div>
+</form>
