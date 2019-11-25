@@ -1,0 +1,10 @@
+package com.tyss.appdevelopment.DAO;
+
+public interface ContactIDAO {
+
+	public void showAllContacts();
+	public void searchContact();
+	public void operarteContact();
+	
+	
+}

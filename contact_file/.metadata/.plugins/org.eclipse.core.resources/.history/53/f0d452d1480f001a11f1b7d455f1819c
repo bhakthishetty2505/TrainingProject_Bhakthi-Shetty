@@ -1,0 +1,16 @@
+package com.tyss.appdevelopment.util;
+
+import com.tyss.appdevelopment.DAO.ContactIDAO;
+
+public class ContactManager {
+
+	private public ContactManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static ContactIDAO getEmployeeDAO() {
+		return new ContactDAOImpl();
+	}
+}
+
+}

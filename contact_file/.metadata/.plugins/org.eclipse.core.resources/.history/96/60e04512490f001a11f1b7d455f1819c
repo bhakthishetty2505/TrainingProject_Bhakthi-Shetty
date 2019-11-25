@@ -1,0 +1,32 @@
+package appdevelopment;
+
+import java.util.Scanner;
+
+import com.tyss.appdevelopment.DAO.ContactIDAO;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		Scanner scn = new Scanner(System.in);
+		int ch = scn.nextInt();
+
+		switch (ch) {
+
+		case 1:
+			ContactIDAO dao = EmployeeManager.getEmployeeDAO();
+			List<EmployeeBean> result = dao.getAllEmployeeDAOImpl();
+			for (EmployeeBean bean : result) {
+				System.out.println("ID is " + bean.getId());
+				System.out.println("Name is " + bean.getName());
+				System.out.println("Salary is " + bean.getSalary());
+				System.out.println("Gender is " + bean.getGender());
+			}
+			break;
+
+		case 2:
+		case 3:
+
+		
+	}
+}

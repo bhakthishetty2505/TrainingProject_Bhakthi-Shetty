@@ -1,0 +1,34 @@
+package appdevelopment;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.tyss.appdevelopment.DAO.ContactIDAO;
+import com.tyss.appdevelopment.DTO.ContactBean;
+import com.tyss.appdevelopment.util.ContactManager;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		Scanner scn = new Scanner(System.in);
+		int ch = scn.nextInt();
+
+		switch (ch) {
+
+		case 1:
+			ContactIDAO dao = ContactManager.getEmployeeDAO();
+			List<ContactBean> result = dao.showAllContacts();
+			for (ContactBean bean : result) {
+				System.out.println("Name is " + bean.getName());
+				System.out.println("Number is " + bean.getNumber());
+				System.out.println("Contact Group is " + bean.getContactGroup());
+			}
+			break;
+
+		case 2:
+		case 3:
+
+		
+	}
+}

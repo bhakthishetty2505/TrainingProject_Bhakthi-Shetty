@@ -1,0 +1,118 @@
+write a query to display the salary of the employee that is incremented/decremented by 5000.
+=> select salary+5000 increment from employee;
+=> select salary-5000 decrement from employee;
+
+2) WAQD the annual salary
+=> select salary*12 annual from employee.
+
+3) WAQD per day salary.
+=> select salary/30 per_day from employee.
+
+4)write a query to display the result from the employee table who's job designation is software developer
+=> select * from employee where designation='software developer';
+
+5) WAQD all the record of the employee excluding who's working in deptno=20.
+=> select * from employee where deptno!=20;
+
+6) WAQD all the employee details who is working in dept no=20 as well as salary is greater than 25000.
+=> select * from employee where deptno=20 and salary>25000;
+
+7) WAQD name, salary from the employee table who is working in deptno 10 and 20
+=> select name, salary from employee where deptno=10 and deptno=20;
+
+8) WAQD employee details who's job designaation is a tester and age =25
+=> select * from employee where designation='Software Tester' and age=25;
+
+9) WAQD all record of the employee who is working as a tester or having salary more than 40000
+=> select * from employee where designation='Software Tester' or salary>40000;
+
+10) WAQD name, salary, age from thee employee table who is working in deptno=10,40,50.
+=> select name, salary, age from employee where deptno=10 or depti=40 or deptno=50;
+
+11) WAQD employee details whose age is more than 25 and blood group is B+.
+=> select * from employee where age >25 and bloodgroup='B+'.
+
+12) WAQD all the record of the employee excluding Tester
+=> select * from employee where not designation = 'software tester';
+=> select * from employee where designation!='software tester';
+
+13) WAQD name of all the employee who is working as a HR or tester and salary >40000
+=> select name from employee where designation = 'HR' or designation = 'software tester' and salary>40000;
+
+14) WAQD all the employee excluding software developer who are working in deptno=40;
+=> select * from employee where not designation = 'software Developer' and deptno=40;
+
+15) WAQD software developer who are working in deptno=10 or 40.
+=> select * from employee where designation = 'software Developer' and (deptno=10 or deptno=40);
+
+16) WAQD all the detail of employee who's working in deptno=40,50,70,80.
+=> select * from employee where deptno in(40,50,70,80);
+
+17) WAQD name of all the employee who's working as a tester. HR, admin.
+=> select name from employee where designation in ('HR', 'Sowater Tester', 'Admin');
+
+18) WAQD the detail of tester, admin, software developer who are in working deptno 20 or 30 and salary > 40000.
+=>select * from employee where designation in ('Software Developer', 'Software Tester', 'Admin') and deptno in(20,30) and salary>40000;
+
+19) WAQD all the record of employee excluding HR, Tester, Admin.
+=> select * from employee where designation not in ('HR', 'Sowater Tester', 'Admin');
+
+20) WAQD all the record of employee whose age is 20, 25,30,40 exclude all the details of tester and developer
+=> select * from employee where age in (20,25,30,40) and designation not in ('HR', 'Sowater Tester', 'Admin');
+
+21) WAQD all the detail of employee who's age is between 20 to 40.
+=> select * from employee  where age between 20 and 40;
+
+22) WAQD all the detail of employee who were hired during 2017.
+=> select * from employee where doj between '2017-01-01' and '2017-12-31';
+
+23) WAQD all the records of the employee exlcuding who's salary is in the range of 350000-400000
+=> select * from employee where salary not between 350000 and 400000;
+
+24) WAQD all the detail of the employee who's name starts with A.
+=> select * from employee where name like 'A%';
+
+25) WAQD the name of the employee who's second character is I.
+=> select name from employee where name like '_I%';
+
+26) WAQD the name of the employee which has atleast two L in their name. 
+=> select name from employee where name like '%L%L%';
+
+27) WAQD the name of the employee who's name starts with S and ends with P.
+=> select name from employee where name like 'S%P';
+
+28) WAQD all the record of employee if the employee begins with A or S.
+=> select * from employee where name like 'A%' or name like 'S%';
+
+29) WAQD name and salary who is working in deptno 10, 20, 30 and designation starts with s.
+=> select * from employee where deptno in(10,20,30) and designation like 'S%';
+=> select name, salary from employee where deptno in(10,20,30) and designation like 'S%';
+
+30) WAQD all the records of the employee and the salary should be arranged in descending order.
+=> select * from employee order by salary desc;
+
+31) WAQD all the record of the employee whose date of joining is same as Bhakthi.
+=> select * from employee where doj = (select doj from employee where name= 'Bhakthi');
+
+32) WAQD the second maximum salary.
+=> select max(salary) from employee where salary<(select max(salary) from employee);
+
+33) WAQD names of the employee who is working in a location which has atleast one A.
+=> select name from employee where deptno in ( select location from department where location like '%A%);
+
+34) WAQD all the record of the employee who's working in admin Operations, developers
+=> select * from employee where deptno in(select deptno from department where dname in (admin, operations, developers));
+
+35) WAQD the maximum salary for each department.
+=> select max(salary) from employee group by deptno;
+
+36) WAQD highest salary given to HR for each department.
+=> select max(salary) from employee where designation = 'HR' group by deptno ;
+
+37) WAQD deptno which has atleast two employees working.
+=> select deptno from employees group by deptno having count(*) > 2;
+
+select * from employee e inner join department d on e.deptno=d.deptno
+select * from employee e left outer join department d on e.deptno=d.deptno
+select * from employee e right outer join department d on e.deptno=d.deptno
+select * from employee e full outer join department d on e.deptno=d.deptno

@@ -1,0 +1,6 @@
+package com.tyss.appdevelopment.DAO;
+
+public interface ContactInterface {
+
+	
+}

@@ -1,0 +1,20 @@
+package appdevelopment;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		System.out.println("Press 1 to show all contacts");
+		System.out.println("Press 2 to search for a contact using name");
+		System.out.println("Press 3 to operate on contacts");
+		
+		int number = 0; 
+		
+		switch(number) {
+			
+		case 1 : 
+		
+		}
+	}
+
+}

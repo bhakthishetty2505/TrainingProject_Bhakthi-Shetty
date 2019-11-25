@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.tyss.appdevelopment.DAO.ContactInterface&apos; to &apos;ContactIDAO&apos;&#x0D;&#x0A;- Original project: &apos;appdevelopment&apos;&#x0D;&#x0A;- Original element: &apos;com.tyss.appdevelopment.DAO.ContactInterface&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tyss.appdevelopment.DAO.ContactIDAO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ContactInterface&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.tyss.appdevelopment.DAO{ContactInterface.java[ContactInterface" matchStrategy="1" name="ContactIDAO" qualified="false" references="true" similarDeclarations="false" stamp="1574660241233" textual="false" version="1.0"/>
+</session>

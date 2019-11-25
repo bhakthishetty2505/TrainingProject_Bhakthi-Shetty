@@ -1,0 +1,16 @@
+package com.tyss.appdevelopment.DAO;
+
+import java.util.List;
+
+import com.tyss.appdevelopment.DTO.ContactBean;
+
+public interface ContactIDAO {
+
+	public List<ContactBean> showAllContacts();
+	ContactBean searchContact(String name);
+	int operarteContact(ContactBean bean);
+	public int deleteContact(String name);
+	public int insertContact(ContactBean bean);
+	
+	
+}

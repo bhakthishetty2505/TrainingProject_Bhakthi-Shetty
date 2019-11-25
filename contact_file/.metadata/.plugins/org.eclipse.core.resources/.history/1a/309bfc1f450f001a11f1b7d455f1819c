@@ -1,0 +1,5 @@
+package com.tyss.appdevelopment.DTO;
+
+public class ContactBean {
+
+}
