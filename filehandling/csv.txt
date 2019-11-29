@@ -1,0 +1,4 @@
+14,Humphrey,15000,M
+15,Roxy,70000,F
+16,Pebble,40000,M
+17,Sarah,30000,F

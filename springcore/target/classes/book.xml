@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id = "book" class = "com.tyss.springcore.di.Book">
+		<property name="author" value = "Dan Brown"></property>
+		<property name="name" value = "Da Vinci"></property>
+		<property name="price" value = "240.90"></property>
+	</bean>
+	<bean id = "author" class = "com.tyss.springcore.di.Author">
+		<property name="name" value = "Sidney Sheldon"></property>
+		<property name="penName" value = "Sid"></property>
+	</bean>
+</beans>

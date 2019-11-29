@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>webapp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+
+	<servlet>
+		<servlet-name>firstServlet</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.MyFirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>firstServlet</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>formServlet</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.FormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formServlet</servlet-name>
+		<url-pattern>/form</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>forwardServlet</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.ForwardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>forwardServlet</servlet-name>
+		<url-pattern>/forward</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>redirectCookie</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.RedirectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>redirectCookie</servlet-name>
+		<url-pattern>/redirectCookie</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>readCookie</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.ReadCookieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>readCookie</servlet-name>
+		<url-pattern>/readCookie</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>cookieCreateServlet</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.CreateCookieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cookieCreateServlet</servlet-name>
+		<url-pattern>/cookieCreate</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>cookieDeleteServlet</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.DeleteCookieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cookieDeleteServlet</servlet-name>
+		<url-pattern>/cookieDelete</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>setContextAttribute</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.SetContextAttributeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>setContextAttribute</servlet-name>
+		<url-pattern>/set-context</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>getContextAttribute</servlet-name>
+		<servlet-class>com.tyss.webapp.servlets.GetContextAttributeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getContextAttribute</servlet-name>
+		<url-pattern>/get-context</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>                                                                                 
