@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <link rel="stylesheet" href="/w3css/3/w3.css">
+    <style> 
+        body{
+            margin: 0; 
+            font-family: Arial, Helvetica, sans-serif;}
+        .topnav {
+            overflow: hidden;
+            background-color: black;
+        }
+        .topnav a{
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #4caf50;
+            color: white;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .top-left{
+            position: absolute;
+            top: 6px;
+            left: 12px;
+        }
+        .top-right{
+            position: absolute;
+            top: 6px;
+            right: 12px;
+        }
+        .centered{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-25%, 25%);
+        }
+        a:link, a:visited{
+            background-color: black;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="home.html">HOME</a>
+        <a href="images.html">IMAGES</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="about.html">ABOUT</a>
+    </div>
+    <div class="container">
+        <img src="C:\Users\VINCENT\Desktop\images\download18.jpg" alt="image" style="width: 99%;">
+        <div class="top-left"><b>CARS FANCIES</b></div>
+        <div class="top-right">
+            <a href="home.html">Visit our home page</a>
+        </div>
+    </div>
+</body>
+</html>
