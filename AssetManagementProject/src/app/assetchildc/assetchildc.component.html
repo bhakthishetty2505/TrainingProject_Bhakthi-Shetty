@@ -1,0 +1,6 @@
+<div *ngIf="car" class="col-md-8 float-left card card-body">
+    <img src="{{car.imgUrl}}" style="height: 550px">
+    <h1>{{car.name}}</h1>
+    <h4>{{car.description}}</h4>
+    <button type="button" class="btn btn-primary" (click)="raiseReqAsset(form)">Book</button>
+</div>

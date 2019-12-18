@@ -1,0 +1,24 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>
+<div class="container">
+  <h1 class="form-heading">login Form</h1>
+  <div class="login-form">
+    <div class="main-div">
+      <div class="panel">
+        <h2>Login</h2>
+        <p>Please enter your email and password</p>
+      </div>
+      <form #loginForm='ngForm' (ngSubmit)='login(loginForm)'>
+        <div class="form-group">
+          <input type="number" class="form-control" id="id" name="userId" placeholder="Enter the ID" #userId='ngModel'
+            ngModel required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="inputPassword" name="userPassword" placeholder="Password"
+            #userPassword='ngModel' ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

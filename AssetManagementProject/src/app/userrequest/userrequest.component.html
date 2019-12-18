@@ -1,0 +1,24 @@
+<div class="card card-body">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark" style='color: white; background-color: grey'>
+            <tr>
+                <td>AssetId</td>
+                <td>AssetName</td>
+                <td>Quantity</td>
+                <td>Description</td>
+                <td>Status</td>
+                <td>Approve</td>
+                <td>Reject</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let li of list'>
+                <td>{{li.assetId}}</td>
+                <td>{{li.assetName}}</td>
+                <td>{{li.quantity}}</td>
+                <td>{{li.assetDes}}</td>
+                <td>{{li.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

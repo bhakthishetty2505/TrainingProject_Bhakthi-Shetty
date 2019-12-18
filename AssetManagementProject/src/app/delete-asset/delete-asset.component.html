@@ -1,0 +1,14 @@
+<form class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="deleteAsset(form)">
+    <h1 class="text-center bg-dark text-white">Delete Asset</h1>
+    <div class="form-group">
+        <input type="number" name="assetId" class="form-control" placeholder="Enter the AssetID to be deleted"
+            #assetId='ngModel' ngModel>
+        <div *ngIf="assetId.touched && assetId.invalid">
+            <p class="alert alert-danger" *ngIf="assetId.errors.required">*Please enter the ID</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary float-right" [disabled]="form.invalid">Remove The
+            Asset</button>
+    </div>
+</form>

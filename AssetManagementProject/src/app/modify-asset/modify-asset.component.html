@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="addasset-form">
+    <div class="main-div">
+      <div class="panel">
+        <h2>Modify Asset</h2>
+        <p>Modify the assets you want</p>
+      </div>
+      <form #modifyAssetForm='ngForm' (ngSubmit)='modifyAsset(modifyAssetForm)'>
+        <div class="form-group">
+          <input type="number" class="form-control" name="assetId" id="assetId" placeholder="Enter the ID"
+            #assetId='ngModel' ngModel required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="assetName" id="assetName" placeholder="Enter the name"
+            #assetName='ngModel' ngModel required>
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" name="quantity" id="quantity" placeholder="Enter the quantity"
+            #quantity='ngModel' ngModel required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="assetDes" id="assetDes" placeholder="Describe the Asset"
+            #assetDes='ngModel' ngModel required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="status" id="status" placeholder="Enter the status"
+            #status='ngModel' ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">Modify Asset</button>
+      </form>
+    </div>
+  </div>
+</div>

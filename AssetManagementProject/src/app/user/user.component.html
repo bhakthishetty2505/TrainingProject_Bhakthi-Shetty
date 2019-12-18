@@ -1,0 +1,8 @@
+<div class="col-md-4 mt-4 float-left card card-body text-center">
+   <div class="card card-body" *ngFor="let car of cars">
+      <img src="{{car.imgUrl}}" (click)="sendCar(car)" style="height: 100px;">
+      <h1>{{car.name}}</h1>
+      <button type="button" class="btn btn-primary" (click)="sendCar(car)">View</button>
+   </div>
+</div>
+<app-assetchildc [car]="selectedCar"></app-assetchildc>
