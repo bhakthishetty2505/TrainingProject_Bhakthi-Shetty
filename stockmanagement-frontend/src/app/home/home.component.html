@@ -1,0 +1,95 @@
+<div class="card card-body">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark" style='color: white; background-color: black;'>
+            <tr>
+                <td>ProductID</td>
+                <td>ProductName</td>
+                <td>Category</td>
+                <td>Company</td>
+                <td>Quantity</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let li of list'>
+                <td>{{li.id}}</td>
+                <td>{{li.name}}</td>
+                <td>{{li.category}}</td>
+                <td>{{li.company}}</td>
+                <td>{{li.category}}</td>
+                <td>{{li.price}}</td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="addasset-form">
+                                            <div class="main-div">
+                                                <div class="panel">
+                                                    <h2>Modify Asset</h2>
+                                                    <p>Modify the assets you want</p>
+                                                </div>
+                                                <form #modifyAssetForm='ngForm'
+                                                    (ngSubmit)='modifyAsset(modifyAssetForm)'>
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control" name="id" id="assetId"
+                                                            placeholder="Enter the ID" #assetId='ngModel' ngModel
+                                                            required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" id="name"
+                                                            placeholder="Enter the name" #name='ngModel' ngModel
+                                                            required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control" name="category"
+                                                            id="category" placeholder="Enter the category"
+                                                            #category='ngModel' ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="company"
+                                                            id="company" placeholder="Describe the Asset"
+                                                            #company='ngModel' ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="quantity"
+                                                            id="quantity" placeholder="Enter the quantity"
+                                                            #quantity='ngModel' ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="price"
+                                                            id="price" placeholder="Enter the quantity"
+                                                            #price='ngModel' ngModel required>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Modify Asset</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
