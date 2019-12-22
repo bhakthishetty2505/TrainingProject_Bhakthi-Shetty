@@ -1,0 +1,59 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>
+<div class="col-md-10 offset-md-1 mt-4">
+    <form #updateProductForm="ngForm" (ngSubmit)="update(updateProductForm)">
+        <div class="card">
+            <div class="card-header">
+                <h5>Update Product</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="number" name="id" id="id" class="form-control" placeholder="Enter id to update"
+                        #id="ngModel" ngModel required>
+                    <div *ngIf="id.touched && id.invalid">
+                        <p class="alert alert-danger" *ngIf="product_id.errors.required">*This Field is required</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter the Product Name"
+                        #name="ngModel" ngModel required>
+                    <div *ngIf="name.touched && name.invalid">
+                        <p class="alert alert-danger" *ngIf="name.errors.required">*This Field is required</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="category" id="category" class="form-control"
+                        placeholder="Enter the Category" #category="ngModel" ngModel required>
+                    <div *ngIf="category.touched && category.invalid">
+                        <p class="alert alert-danger" *ngIf="category.errors.required">*This Field is required</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="quantity" id="quantity" class="form-control"
+                        placeholder="Enter the Quantity" #quantity="ngModel" ngModel required>
+                    <div *ngIf="quantity.touched && quantity.invalid">
+                        <p class="alert alert-danger" *ngIf="quantity.errors.required">*This Field is required</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="price" id="price" class="form-control" placeholder="Enter the Price"
+                        #price="ngModel" ngModel required>
+                    <div *ngIf="price.touched && price.invalid">
+                        <p class="alert alert-danger" *ngIf="price.errors.required">*This Field is required</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="company" id="company" class="form-control" placeholder="Enter the Company"
+                        #company="ngModel" ngModel required>
+                    <div *ngIf="company.touched && company.invalid">
+                        <p class="alert alert-danger" *ngIf="company.errors.required">*This Field is required</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-outline-primary float-right" [disabled]="updateProductForm.invalid">Update
+                        Asset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

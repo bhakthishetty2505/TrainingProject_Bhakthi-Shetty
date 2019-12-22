@@ -1,0 +1,37 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>
+<form class="form-inline offset-4 mt-2" #searchByNameForm="ngForm" (ngSubmit)="searchByName(searchByNameForm)">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" id="name" name="name" #name="ngModel" ngModel
+        aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<table class="table table-bordered table-hover mt-4">
+    <thead class="thead-dark">
+        <tr>
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Company</th>
+            <th>Add To Cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of Product | filter : name">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.company}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                    (click)="selectUser(org)">
+                    Add To Cart
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
