@@ -1,0 +1,128 @@
+
+/* responsive */
+
+@media (max-width:767px)
+{
+
+    .ty-font.heading{
+display: none;
+    }
+    .card.card-body.col-md-4.offset-4.mt-5 {
+        width: 358px;
+        right: 119px;position: relative;
+    }
+    .user-input-wrp .inputText {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #777;
+        box-shadow: none !important;
+    }
+   
+
+}
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+.form-control {
+   
+    padding: .0rem .0rem;
+   
+}
+
+.ty-font.heading {
+    position: relative;
+    top: 60px;
+    font-size: 28px;
+    font-weight: bolder;
+    left: 640px;
+}
+
+.card.card-body.col-md-4.offset-4.mt-5 {
+    background-color: #fff;
+    margin-top: -40px;
+}
+
+.form-group.col-md-6.ty-font.user-input-wrp {
+    left: 10px;
+}
+
+.col-md-6.ty-font.left.user-input-wrp {
+    left: 10px; 
+    
+}
+
+.ty-editOption {
+    width: 90%;
+    height: 26px;
+    position: relative;
+    top: -29px;
+    border: 0;
+    padding-left: 5px;
+}
+
+.form-check.float-left {
+    left: 15px;
+}
+
+.ty-create-button {
+    position: relative;
+    top: 10px;
+}
+
+.ty-reset-button {
+    position: relative;
+    right: 10px;
+    top: 10px;
+}
+
+.ty-errmsg {
+    color: red;
+    font-size: 12px;
+    /* font-family: 'Numans',sans-serif,Tit; */
+    font-family: 'Titillium Web', sans-serif;
+}
+
+option {
+    height: 30px;
+    line-height: 30px;
+}
+
+input, select {
+    border: none;
+    border-bottom: solid black 1px;
+    outline: none;
+}
+
+.user-input-wrp {
+    position: relative;
+    width: 50%;
+}
+
+.user-input-wrp .inputText {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #777;
+    box-shadow: none !important;
+}
+
+.user-input-wrp .inputText:focus {
+    border-width: medium medium 2px;
+}
+
+.user-input-wrp .floating-label {
+    position: absolute;
+    pointer-events: none;
+    top: 18px;
+    left: 10px;
+    transition: 0.2s ease all;
+}
+
+.user-input-wrp input:focus~.floating-label, .user-input-wrp input:not(:focus):valid~.floating-label {
+    top: 0px;
+    left: 10px;
+    font-size: 13px;
+    opacity: 1;
+}

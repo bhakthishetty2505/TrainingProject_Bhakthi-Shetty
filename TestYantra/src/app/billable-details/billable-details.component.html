@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container col-md-10 offset-1">
+        <div class="mt-4">
+            <h3 class="ty-heading">Billable Employee Details</h3>
+            <table class="table table-hover table-bordered">
+                <thead class="text-white ty-header">
+                    <tr>
+                        <td>client Id</td>
+                        <td>Employee Name</td>
+                        <td>Date Of Deployment</td>
+                        <td>Contract End Date </td>
+                        <td>Ratecard</td>
+                        <td>Stack</td>
+                        <td>Year Of Experience</td>
+                        <td>Delete</td>
+                        <td>Update</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of clients" (click)="printSelectedRow(data)">
+                        <td>{{data.compId}}</td>
+                        <td>{{data.empName}}</td>
+                        <td>{{data.deployementDate}}</td>
+                        <td>{{data.contractEndDate}}</td>
+                        <td>{{data.rateCardPerMonth}}</td>
+                        <td>{{data.stack}}</td>
+                        <td>{{data.yoe}}</td>
+                        <td><button type="submit" class="btn btn-outline-danger" (click)='delete(data.employeeId)'>Delete</button></td>
+                        <td><button type="submit" class="btn btn-outline-info" (click)='update(data)'>Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class=" mt-4 mb-4" id="ty-pagination">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+    </body>
+</html>

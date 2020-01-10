@@ -1,0 +1,92 @@
+<!-- <p>home works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+    <style>
+        .card.card-body {
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row col-md-12 mt-5">
+        <div class="col-md-2  offset-2 card card-body">
+            <h4 class="col-xs-6">
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/clientlogo">
+                    <i class="fa fa-handshake-o fa-5x mt-3" style="color:#263248; margin-left: 65px;">
+                    </i> </a>
+            </h4>
+            <h5 style="text-align: center; font-family: 'Bebas Neue', cursive;font-weight:bold;" class="mt-2 mr-3">Clients</h5>
+        </div>
+        <div class="col-md-2 ml-4  card card-body">
+            <h4 class="col-xs-6">
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/billdash">
+                    <i class="fa fa-user-circle fa-5x mt-3" style="color: #62B58F; margin-left: 75px;"></i> </a>
+            </h4>
+            <h5 style="text-align: center; font-family: 'Bebas Neue', cursive;font-weight:bold;" class="mt-2 mr-3">Billable</h5>
+        </div>
+        <div class="col-md-2 ml-4  card card-body">
+            <h4 class="col-xs-6">
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/nonbill">
+                    <i class="fa fa-user-circle-o fa-5x mt-3" style="color:rgb(226, 124, 87); margin-left: 85px;"></i> </a>
+            </h4>
+            <h5 style="text-align: center; font-family: 'Bebas Neue', cursive;font-weight:bold;" class="mt-2 mr-3">Non Billable</h5>
+        </div>
+        <div class="col-md-2 ml-4 card card-body">
+            <h4 class="col-md-6">
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/client">
+                    <i class="fa fa-inr fa-5x mt-3" style="color: #263248; margin-left: 100px;"></i> </a>
+            </h4>
+            <h5 style="text-align: center; font-family: 'Bebas Neue', cursive;font-weight:bold;" class="mr-4 mt-1">Revenue</h5>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-5" style="margin-left: 13%;">
+            <fusioncharts width="550" height="400" type="AngularGauge" [dataSource]="dataSource">
+            </fusioncharts>
+        </div>
+        <div id="profit" class="col-md-4 mt-5 " style="width: 90%; height: 400px;margin-left: 8%;">
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-md-6 offset-1 mt-3" style="margin-left: 8%;">
+            <div id="chartdiv1" style="width: 90%; height: 400px">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col col-md-6 mt-3">
+            <highcharts-chart [Highcharts]="highcharts" [options]="cart1" style="width: 100%; height: 400px; display: block;">
+            </highcharts-chart>
+        </div>
+        <div class="col col-md-6 mt-3">
+            <highcharts-chart [Highcharts]="highcharts" [options]="cart11" style="width: 100%; height: 400px; display: block;"></highcharts-chart>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-6 mt-3">
+            <highcharts-chart [Highcharts]="highcharts" [options]="cart7" style="width: 100%; height: 400px; display: block;"></highcharts-chart>
+        </div>
+        <div class="col col-md-6 mt-3">
+            <highcharts-chart [Highcharts]="highcharts" [options]="cart3" style="width: 100%; height: 400px; display: block;"></highcharts-chart>
+        </div>
+
+    </div>
+</body>
+
+</html>

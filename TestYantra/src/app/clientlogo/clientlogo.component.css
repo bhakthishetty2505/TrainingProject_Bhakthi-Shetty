@@ -1,0 +1,7 @@
+#imgId{
+    height: 150px;
+    width: 250px;
+}
+#imgId:hover+a{
+    display: block;
+}

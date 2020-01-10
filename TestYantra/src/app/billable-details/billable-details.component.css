@@ -1,0 +1,36 @@
+table {
+    width: 90%;
+}
+
+.ty-download {
+    margin-top: 5px;
+    right: 380px;
+    position: relative;
+}
+
+.ty-print {
+    margin-top: 5px;
+    right: 500px;
+    position: relative;
+}
+
+.ty-heading {
+    font-weight: 700;
+}
+
+.table.table-hover.table-bordered {
+    cursor: pointer;
+}
+
+.ty-header {
+    background-color: #263248;
+}
+
+#ty-pagination {
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    z-index: -1;
+    margin-left: 1000px;
+    cursor: pointer;
+    font-weight: 700;
+}

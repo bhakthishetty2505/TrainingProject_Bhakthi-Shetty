@@ -1,0 +1,370 @@
+nav {
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+  
+    top: 0px;
+    z-index: 1;
+  }
+  .navbar-brand.new{
+    font-weight: 500 !important;
+    font-size: 25px !important;
+    margin-right: 3rem !important;
+  }
+  
+  .ty-logo {
+    color: #ff9800;
+    font-size: 25px;
+  }
+  
+  .ty-categories {
+    position: relative;
+    bottom: -25px;
+    left: 35px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  span.ty-span {
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    margin: 12px;
+    text-transform: uppercase;
+  }
+  
+  .ty-icon {
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 800;
+    position: relative;
+    top: 101px
+  }
+  
+  .ty-icon1 {
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 800;
+    position: relative;
+    top: 83px
+  }
+  
+  .new-bg {
+    background-color: #263248;
+  }
+  
+  .new-link {
+    color: #fff !important;
+    padding: 5px 12px !important;
+    ;
+  }
+  
+  .new-link:hover {
+    color: #ff9800 !important;
+  }
+  
+  
+  .social a {
+    color: #263248;
+    font-size: 22px;
+    margin: 10px 5px;
+  }
+  
+  i.fab.fa-facebook-f {
+    padding: 6px 12px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+  }
+  
+  i.fab.fa-linkedin-in {
+    padding: 6px 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+  }
+  
+  i.fab.fa-instagram {
+    padding: 6px 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+  }
+  
+  .text {
+    color: #263248;
+  }
+  
+  /* body {
+    margin: 0;
+    padding: 0;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 21px;
+    font-size: 16px;
+    letter-spacing: .05em;
+  } */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .nav-area {
+    position: relative;
+    padding: 0;
+    margin: -8px;
+    background-color: #263248;
+    letter-spacing: 2px;
+    width: 250px;
+    font-family: ProximaNova, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  
+  .nav-area a:link, .nav-area a:visited, .nav-area a:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-area a:hover {
+    color: #247c9d;
+    text-decoration: none;
+  }
+  
+  .nav-area>li {
+    display: block;
+    text-align: center;
+  }
+  
+  .nav-area>li>a {
+    padding: 32px 18px;
+    display: block;
+  }
+  
+  .nav-area>li:hover a {
+    color: #ff9800 !important;
+  }
+  
+  .nav-area>li>.sub-nav {
+    list-style: none;
+    top: 0;
+    left: 250px;
+    width: 700px;
+    min-height: 100%;
+    text-align: left;
+    margin-top: 30px;
+    padding: 0;
+    z-index: 99;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  .nav-area>li:hover .sub-nav {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+    background: #313131;
+  }
+  
+  .nav-area ul li :hover:after {
+    color: #247c9d;
+  }
+  
+  .nav-area .sub-menu {
+    width: 100%;
+    height: 700px;
+    float: left;
+    color: #fff;
+    margin: -26px 0 0 0px
+  }
+  
+  .nav-area .sub-menu ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-area .sub-menu ul li {
+    padding: 0;
+    list-style: none;
+    font-size: 16px
+  }
+  
+  .nav-area .sub-menu h3 {
+    font-size: 32px;
+    padding: 10px 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin: 30px 30px 30px 0;
+    color: #fff;
+  }
+  
+  .nav-area .sub-menu ul li a {
+    display: block;
+    padding: 6px 0 22px 13px;
+    color: #fff;
+  }
+  
+  .nav-area .sub-menu ul li a:hover {
+    color: #fff;
+  }
+  
+  .dropdown-menu li a {
+    -webkit-tap-highlight-color: #E6E6E6;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .nav-area>li>ul li ul, .nav-area li>ul li, .nav-area>li>ul, .nav-area>li {
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .dropdown-menu {
+    border: none;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .sub-menu {
+    background-color: #263248;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .mt-3 {
+    position: relative;
+    left: 50px
+  }
+  
+  #on-air-now {
+    position: relative;
+    left: 49px;
+    color: white;
+  }
+  
+  .on-air-span {
+    position: relative;
+    left: 51px;
+    color: white;
+  }
+  
+  path {
+    fill: white;
+  }
+  
+  .all-classes {
+    color: white;
+  }
+  
+  #accordion {
+    display: none;
+  }
+  
+  .nav-area {
+    height: 676px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* responsive */
+  
+  
+  @media (device-width:360px) {
+    .navbar.navbar-expand-md.new-bg.navbar-dark{
+      width: 100%;
+  }
+  .ty-logo{
+    position: relative;
+      left: 0px;
+  }
+  .navbar-brand{
+    position: absolute;
+      left: 65px;
+  }
+  .navbar-toggler{
+    right: 10px;
+      position: relative;
+  }
+  }
+  @media (max-width:767px) {
+    
+    .mb-0>a {
+      display: block;
+      position: relative;
+    }
+    .mb-0>a:after {
+      content: "\f078";
+      /* fa-chevron-down */
+      font-family: 'FontAwesome';
+      position: absolute;
+      right: 0;
+    }
+    .mb-0>a[aria-expanded="true"]:after {
+      content: "\f077";
+      /* fa-chevron-up */
+    }
+    .nav-item.dropdown{
+      display: none;
+    }
+    .dropdownMenuButton{
+      display: none;
+    }
+    #accordion {
+      display: block;
+    }
+    #accordion ul li {
+      list-style: none;
+    }
+    .card-header {
+      background-color: #313131;
+    }
+    .mb-0 a {
+      color: white;
+      font-family: ProximaNova, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+    .card-body {
+      background-color: black;
+    }
+    .card-body ul li a {
+      color: white;
+    }
+    .categories {
+      position: relative;
+      left: -12px;
+      bottom: -10px;
+    }
+    #on-air-now, .on-air-span {
+      position: relative;
+      left: -9px;
+    }
+    .mt-3 {
+      position: relative;
+      left: -7px;
+    }
+    span.span{
+      position: relative;
+      left: -14px;
+    }
+    #photo {
+      bottom: -20px;
+    }
+    #heading-1 {
+      height: 150px;
+    }
+  }
+  
+  @media (device-width:768px) {
+    .nav-area .sub-menu {
+      width: 512px;
+      height: 675px;
+      float: left;
+      color: #fff;
+      margin: 0px 0 0 0px;
+    }
+  }

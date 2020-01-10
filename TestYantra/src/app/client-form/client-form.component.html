@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body style="height: 1000px;">
+
+  <label for="title" class="ty-font heading">Add Client Details</label>
+  <div class="card card-body col-md-6 offset-3 mt-5">
+    <div class="card-body ">
+      <form action="" method="post" #form="ngForm" (ngSubmit)="printClientForm(form.value)">
+        <div class="form-row mt-3">
+            <div class="form-group">
+                <input type="hidden" name="clientId" #clientId="ngModel" [(ngModel)]='selectedClient.clientId' class="form-control">
+            </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+            <input type="text" class="form-control  inputText" id="clientName" name="clientName" #clientName="ngModel" [(ngModel)]='selectedClient.clientName'
+               required>
+            <span class="floating-label">Client Name</span>
+            <!-- <div *ngIf="clientName.invalid && (clientName.dirty || clientName.touched)" class="ty-errmsg ">
+              <div *ngIf="clientName.errors.required"> clientName is required * </div>
+            </div> -->
+          </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+            <input type="text" class="form-control  inputText" id="clientShortName" name="clienShortName"
+              #clientShortName="ngModel" [(ngModel)]='selectedClient.clienShortName' required>
+            <span class="floating-label">Client Short Name</span>
+
+            <div *ngIf="clientShortName.invalid && (clientShortName.dirty || clientShortName.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="clientShortName.errors.required"> client Short Name is required * </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="form-row mt-3">
+          <div class="col-md-6 ty-font left user-input-wrp" id="billdesc">Department<br />
+            <select class="custom-select inputText" id="test" name="deptName" #deptName="ngModel"  [(ngModel)]='selectedClient.deptName' required>
+              <option selected disabled value="">Department</option>
+              <option>Development</option>
+              <option>Testing</option>
+              <option>Data science</option>
+              <option>Other</option>
+            </select>
+            <input class="ty-editOption" style="display:none;" placeholder="department" name="department" #department="ngModel" ngModel >
+            <!-- <div *ngIf="department.invalid && (department.dirty || department.touched)" class="ty-errmsg ">
+              <div *ngIf="department.errors.required"> Department is required * </div>
+            </div> -->
+          </div>
+
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="clientNo" name="clientNo" #clientNo="ngModel" [(ngModel)]='selectedClient.clientNo'
+              required>
+            <span class="floating-label">Client-No</span>
+            <!-- <div *ngIf="clientNo.invalid && (clientNo.dirty || clientNo.touched)" class="ty-errmsg ">
+              <div *ngIf="clientNo.errors.required"> clientNo is required * </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="form-row mt-3">
+          <div class="form-group col-md-6 ty-font left user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="clientEmail" name="clientEmail"
+              #clientEmail="ngModel" [(ngModel)]='selectedClient.clientEmail' required>
+            <span class="floating-label">Cleint-Email</span>
+            <!-- <div *ngIf="clientEmail.invalid && (clientEmail.dirty || clientEmail.touched)" class="ty-errmsg ">
+              <div *ngIf="clientEmail.errors.required"> clientEmail is required * </div>
+            </div> -->
+          </div>
+
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="companyWebsite" name="compWebSite"
+              #companyWebsite="ngModel" [(ngModel)]='selectedClient.compWebSite' required>
+            <span class="floating-label">Company Website</span>
+            <!-- <div *ngIf="companyWebsite.invalid && (companyWebsite.dirty || companyWebsite.touched)" class="ty-errmsg ">
+              <div *ngIf="companyWebsite.errors.required"> companyWebsite is required * </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-row mt-3">
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <span  style="font-size: 12px;">Upload the Logo</span>
+
+            <input type="text" class="form-control" id="clientLogo" name="clientLogo"
+              #clientLogo="ngModel" [(ngModel)]='selectedClient.clientLogo' required>
+            <!-- <div *ngIf="clientLogo.invalid && (clientLogo.dirty || clientLogo.touched)" class="ty-errmsg ">
+              <div *ngIf="clientLogo.errors.required"> clientLogo is required * </div>
+            </div> -->
+          </div>
+        </div>
+
+        <label for="title" class="ty-font mt-3" style="font-size:25px;">Client Address</label>
+        <div class="form-row mt-2">
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="streetAddress" name="streetAddress"
+              #streetAddress="ngModel" [(ngModel)]='selectedClient.streetAddress' required>
+            <span class="floating-label">Street Address</span>
+            <!-- <div *ngIf="streetAddress.invalid && (streetAddress.dirty || streetAddress.touched)" class="ty-errmsg ">
+              <div *ngIf="streetAddress.errors.required"> streetAddress is required * </div>
+            </div> -->
+          </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="addressLine" name="addressLine2"
+              #addressLine="ngModel" [(ngModel)]='selectedClient.addressLine2' required>
+            <span class="floating-label">Address Line2 </span>
+            <!-- <div *ngIf="addressLine.invalid && (addressLine.dirty || addressLine.touched)" class="ty-errmsg ">
+              <div *ngIf="addressLine.errors.required"> addressLine is required * </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-row mt-3">
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="city" name="city" #city="ngModel" [(ngModel)]='selectedClient.city' required>
+            <span class="floating-label">City</span>
+            <!-- <div *ngIf="city.invalid && (city.dirty || city.touched)" class="ty-errmsg ">
+              <div *ngIf="city.errors.required"> city is required * </div>
+            </div> -->
+          </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="state" name="state" #state="ngModel" [(ngModel)]='selectedClient.state'
+              required>
+            <span class="floating-label">State </span>
+            <!-- <div *ngIf="state.invalid && (state.dirty || state.touched)" class="ty-errmsg ">
+              <div *ngIf="state.errors.required"> state is required * </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-row mt-3">
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="zipCode" name="zipCode" #zipCode="ngModel" [(ngModel)]='selectedClient.zipCode'
+              required>
+            <span class="floating-label">Zip Code</span>
+            <!-- <div *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)" class="ty-errmsg ">
+              <div *ngIf="zipCode.errors.required"> zipCode is required * </div>
+            </div> -->
+          </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="text" class="form-control  inputText" id="country" name="country" #country="ngModel" [(ngModel)]='selectedClient.country'
+              required>
+            <span class="floating-label">Country </span>
+            <!-- <div *ngIf="country.invalid && (country.dirty || country.touched)" class="ty-errmsg ">
+              <div *ngIf="country.errors.required"> country is required * </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="float-right ty-create-button">
+          <button type="submit" class="btn btn-outline-primary ty-font" [disabled]='form.invalid'>Create</button>
+        </div>
+        <div class="float-right ty-reset-button">
+          <button type="reset" class="btn btn-outline-secondary ty-font" [disabled]='form.invalid'>Reset</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>
+
+</html>

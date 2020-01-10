@@ -1,0 +1,113 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+
+}
+.navbar-brand {
+    font-weight: 600 !important;
+    font-size: 25px !important;
+    margin-right: 3rem !important;
+}
+
+.ty-logo1{
+    font-size: 25px;
+    left: 10px;
+    position: relative;
+}
+
+.ty-span {
+    color: #ff9800;
+    font-size: 25px;
+}
+
+.new-bg {
+    background-color: #263248;
+}
+
+.new-link {
+    color: #fff !important;
+    padding: 5px 12px !important;
+    ;
+}
+
+.new-link:hover {
+    color: #ff9800 !important;
+}
+
+footer {
+    background-color: #F5F5F5;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.ty-social {
+    right: 315px;
+    position: relative;
+    top: 5px;
+}
+
+.ty-social a {
+    color: #263248;
+    font-size: 22px;
+    margin: 10px 5px;
+}
+
+i.fab.fa-facebook-f {
+    /* background-color: #9e9e9ed1; */
+    padding: 6px 12px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+}
+
+i.fab.fa-linkedin-in {
+    /* background-color: #9e9e9ed1; */
+    padding: 6px 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+}
+
+i.fab.fa-instagram {
+    /* background-color: #9e9e9ed1; */
+    padding: 6px 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+}
+
+.ty-text {
+    color: #263248;
+    font-weight: 600;
+    right: 175px;
+    top: 10px;
+}
+
+@media (max-width:767px){
+    .col-md-3.ty-text{
+        top: -10px;
+    left: 40px;
+    position: relative;
+    }
+    .fab.fa-facebook-f{
+        left: 420px;
+        bottom: 14px;
+    position: relative;
+    }
+    .fab.fa-linkedin-in{
+        left: 420px;
+        bottom: 14px;
+        position: relative;
+    }
+    .fab.fa-instagram{
+        left: 420px;
+        bottom: 14px;
+        position: relative;
+    }
+    .ty-logo{
+        position: relative;
+        left: 106px;
+    }
+}

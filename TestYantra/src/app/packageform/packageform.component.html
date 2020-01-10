@@ -1,0 +1,75 @@
+<!-- <p>package-billable works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+
+<body style="height: 1000px;">
+
+  <label for="title" class="ty-font heading">Package of Billable Employees</label>
+  <div class="card card-body col-md-4 offset-4 mt-5">
+    <div class="card-body ">
+      <form action="" method="post" #form="ngForm" (ngSubmit)="printPackageForm(form.value)">
+        <div class="form-row mt-3">
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+            <input type="date" class="form-control  inputText" id="dopByTy" name="dopByTy"
+              #dopByTy="ngModel" ngModel required>
+            <span class="floating-label">DateOfPaymentByTYSS</span>
+
+            <div *ngIf="dopByTy.invalid && (dopByTy.dirty || dopByTy.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="dopByTy.errors.required">dateOfPaymentByTYSS required * </div>
+            </div>
+          </div>
+          
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+            <input type="date" class="form-control  inputText" id="dopByClient" name="dopByClient"
+              #dopByClient="ngModel" ngModel required>
+            <span class="floating-label">DateOfPaymentByClient</span>
+
+            <div *ngIf="dopByClient.invalid && (dopByClient.dirty || dopByClient.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="dopByClient.errors.required">dateOfPaymentByClient required * </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row mt-3">
+
+          <div class="form-group col-md-6 ty-font left user-input-wrp"><br />
+            <input type="number" class="form-control  inputText" id="paymentByClient" name="paymentByClient"
+              #paymentByClient="ngModel" ngModel required>
+            <span class="floating-label">Payment By Client</span>
+            <div *ngIf="paymentByClient.invalid && (paymentByClient.dirty || paymentByClient.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="paymentByClient.errors.required"> paymentByClient is required * </div>
+            </div>
+          </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <input type="number" class="form-control  inputText" id="paymentByTy" name="paymentByTy"
+              #paymentByTy="ngModel" ngModel required>
+            <span class="floating-label">Payment By TYSS</span>
+            <div *ngIf="paymentByTy.invalid && (paymentByTy.dirty || paymentByTy.touched)" class="ty-errmsg ">
+              <div *ngIf="paymentByTy.errors.required"> paymentByTyss is required * </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-right ty-create-button">
+          <button type="submit" class="btn btn-outline-primary ty-font" [disabled]='form.invalid'>Create</button>
+        </div>
+        <div class="float-right ty-reset-button">
+          <button type="submit" class="btn btn-outline-secondary ty-font" [disabled]='form.invalid'>Reset</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>
+
+</html>
