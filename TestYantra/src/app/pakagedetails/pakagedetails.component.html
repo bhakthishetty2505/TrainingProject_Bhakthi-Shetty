@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container col-md-6 offset-3 mt-4">
+        <label for="title" class="ty-heading">Package Details</label>
+        <table class="table table-hover table-bordered">
+            <thead class="text-white ty-header">
+                <tr>
+                    <td>Payment Date (TYSS)</td>
+                    <td>Payment Date (Client)</td>
+                    <td>Payment By TYSS</td>
+                    <td>Payment By Client</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of packageDetail" (click)="printSelectedRow(data)" data-toggle="modal"
+                    data-target="#exampleModal">
+                    <td>{{data.dateOfPaymentByTyss}}</td>
+                    <td>{{data.dateOfPaymentByClient}}</td>
+                    <td>{{data.paymentByTyss}}</td>
+                    <td>{{data.paymentByClient}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label for="title" class="ty-font heading">Update package</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="" method="post" #form="ngForm">
+                        <!-- <input type="hidden" name="_id" #_id='ngModel' [(ngModel)]="clientDetails._id" ngModel> -->
+                        <div class="form-row mt-3">
+                            <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                                <input type="text" class="form-control  inputText" id="dateOfPaymentByTyss"
+                                    name="dateOfPaymentByTyss" #dateOfPaymentByTyss="ngModel"
+                                    [(ngModel)]="packageDetail.dateOfPaymentByTyss" ngModel>
+                                <span class="floating-label">dateOfPaymentByTyss </span>
+                            </div>
+                            <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                                <input type="text" class="form-control  inputText" id="dateOfPaymentByClient"
+                                    name="dateOfPaymentByClient" #dateOfPaymentByClient="ngModel" ngModel
+                                    [(ngModel)]="packageDetail.dateOfPaymentByClient">
+                                <span class="floating-label">dateOfPaymentByClient</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row mt-3">
+                            <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                                <input type="text" class="form-control  inputText" id="paymentByTyss"
+                                    name="paymentByTyss" #paymentByTyss="ngModel" ngModel
+                                    [(ngModel)]="packageDetail.paymentByTyss">
+                                <span class="floating-label">paymentByTyss</span>
+                            </div>
+                            <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                                <input type="number" class="form-control  inputText" id="paymentByClient"
+                                    name="paymentByClient" #paymentByClient="ngModel" ngModel
+                                    [(ngModel)]="packageDetail.paymentByClient">
+                                <span class="floating-label">paymentByClient</span>
+                          </div>
+                        </div>
+                        <div class="float-right ty-create-button">
+                            <button type="submit" class="btn btn-outline-primary ty-font" data-dismiss="modal"
+                                (click)="updateClients(form.value)">Update</button></div>
+                        <div class="float-right ty-reset-button">
+
+                            <button type="button" class="btn btn-outline-danger ty-font" data-toggle="modal"
+                                data-target=".bd-example-modal-sm">Delete</button>
+                            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+                                aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                            <h5 class="modal-title ty-font" id="exampleModalLabel"
+                                                style="font-size: 22px; font-weight: bold;">Delete Client Details</h5>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to delete
+                                                the clientDetails
+                                            </p>
+                                            <button type="submit" class="btn btn-outline-danger ty-font"
+                                                data-dismiss="modal"
+                                                (click)="deleteClientDetails(form.value._id)">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" mt-4 mb-4" id="ty-pagination">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+</body>
+
+</html>

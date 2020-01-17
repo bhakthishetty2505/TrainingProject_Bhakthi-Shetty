@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body style="height: 1000px;">
+  <label for="title" class="ty-font heading mt-5">Billable Employees</label>
+  <div class="card card-body col-md-4 offset-4 mt-5">
+
+    <div class="card-body ">
+
+      <form action="" method="post" #form="ngForm" (ngSubmit)="printBillableForm(form.value)"  #search='ngForm' (ngSubmit)="getSearch(search)">
+        <div class="form-row mt-3">
+          <div class="form-group">
+            <input type="hidden" name="employeeId" #employeeId="ngModel" [(ngModel)]='selectedBillable.employeeId' class="form-control">
+        </div>
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+            <span class="floating-label">Employee Name</span>
+            <input type="text" class="form-control  inputText" id="empName" name="empName"  [(ngModel)]='selectedBillable.empName' #empName="ngModel" ngModel
+              required>
+
+            <div *ngIf="empName.invalid && (empName.dirty || empName.touched)" class="ty-errmsg ">
+              <div *ngIf="empName.errors.required"> empName is required * </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 ty-font left user-input-wrp" id="billdesc">Company Name<br />
+            <!-- <select class="custom-select inputText" id="test" name="compId" [(ngModel)]='selectedBillable.compId' #compId="ngModel" ngModel required>
+              <option *ngFor="let data of clients" value={{data.clientId}}>{{data.clientName}}</option>
+            </select> -->
+            <div class="form-group">
+              <input type="search" name="clientName"  [(ngModel)]='selectedBillable.clientName' #clientName="ngModel" ngModel required placeholder="search for Client"
+                  class="form-control">
+          </div>
+            
+       </div>
+        </div>
+        <div class="form-row mt-3">
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+            <span class="floating-label">deployementDate</span>
+            <input type="date" class="form-control  inputText" id="deployementDate" name="deployementDate" [(ngModel)]='selectedBillable.deployementDate'
+              #deployementDate="ngModel" ngModel required>
+
+            <div *ngIf="deployementDate.invalid && (deployementDate.dirty || deployementDate.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="deployementDate.errors.required"> deployementDate is required * </div>
+            </div>
+          </div>
+        <!-- </div> -->
+        <!-- <div class="form-row mt-3"> -->
+
+          <div class="form-group col-md-6 ty-font user-input-wrp"> <br/>
+            <span class="floating-label">contractEndDate</span>
+            <input type="date" class="form-control  inputText" id="contractEndDate" name="contractEndDate"  [(ngModel)]='selectedBillable.contractEndDate'
+              #clientShortName="ngModel" ngModel required>
+            <!-- <div *ngIf="contractEndDate.invalid && (contractEndDate.dirty || contractEndDate.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="contractEndDate.errors.required">contractEndDate required * </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-row mt-3">
+          <div class="col-md-6 ty-font left user-input-wrp" id="billdesc"><br />
+            <span class="floating-label">Stack</span>
+            <select class="custom-select inputText" id="test" name="stack" [(ngModel)]='selectedBillable.stack' #stack="ngModel" ngModel required>
+              <option selected disabled value="">stack</option>
+              <option>Development</option>
+              <option>Testing</option>
+              <option>Data science</option>
+              <option>Other</option>
+            </select>
+            <input class="ty-editOption" style="display:none;" placeholder="stack" name="stack" ngModel>
+            <div *ngIf="stack.invalid && (stack.dirty || stack.touched)" class="ty-errmsg ">
+              <div *ngIf="stack.errors.required"> stack is required * </div>
+            </div>
+          </div>
+        <!-- </div>
+
+        <div class="form-row mt-3"> -->
+          <div class="form-group col-md-6 ty-font user-input-wrp"><br />
+            <span class="floating-label">rateCardPerMonth</span>
+            <input type="text" class="form-control  inputText" id="rateCardPerMonth" name="rateCardPerMonth"  [(ngModel)]='selectedBillable.rateCardPerMonth'
+              #rateCardPerMonth="ngModel" ngModel required>
+
+            <div *ngIf="rateCardPerMonth.invalid && (rateCardPerMonth.dirty || rateCardPerMonth.touched)"
+              class="ty-errmsg ">
+              <div *ngIf="rateCardPerMonth.errors.required"> rateCardPerMonth is required * </div>
+            </div>
+          </div>
+        </div>
+          <div class="form-group col-md-6 ty-font left user-input-wrp"><br />
+            <span class="floating-label">Year Of Experience</span>
+            <input type="text" class="form-control  inputText" id="yoe" name="yoe" [(ngModel)]='selectedBillable.yoe' #clientEmail="ngModel" ngModel
+              required>
+            <!-- <div *ngIf="yoe.invalid && (yoe.dirty || yoe.touched)" class="ty-errmsg ">
+              <div *ngIf="yoe.errors.required"> Year Of Experience is required * </div>
+            </div> -->
+          </div>
+
+        <!-- </div> -->
+        <div class="float-right ty-create-button">
+          <button type="submit" class="btn btn-outline-primary ty-font" >Create</button>
+        </div>
+        <div class="float-right ty-reset-button">
+          <button type="reset" class="btn btn-outline-success ty-font">Reset</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <div class=" mt-4 mb-4" id="ty-pagination">
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+
+
+</body>
+
+</html>

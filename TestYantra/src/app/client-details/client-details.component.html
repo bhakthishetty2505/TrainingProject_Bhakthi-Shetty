@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container col-md-10 offset-1">
+        <div class="mt-4">
+            <h3 class="ty-heading">Client Details</h3>
+            <table class="table table-hover table-bordered">
+                <thead class="text-white ty-header">
+                    <tr>
+                        <td>clientId</td>
+                        <td>clientName</td>
+                        <td>clientShortName</td>
+                        <!-- <td>Client Logo</td> -->
+                        <td>Department</td>
+                        <td>PhoneNo</td>
+                        <td>Email</td>
+                        <td>companyWebsite</td>
+                        <td>streetAddress</td>
+                        <td>addressLine</td>
+                        <td>city</td>
+                        <td>state</td>
+                        <td>country</td>
+                        <td>Update</td>
+                        <td>delete</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of array" (click)="printSelectedRow(data)">
+                        <td>{{data.clientId}}</td>
+                        <td>{{data.clientName}}</td>
+                        <td>{{data.clienShortName}}</td>
+                        <!-- <td>{{data.clientLogo}}</td> -->
+                        <td>{{data.deptName}}</td>
+                        <td>{{data.clientNo}}</td>
+                        <td>{{data.clientEmail}}</td>
+                        <td>{{data.compWebSite}}</td>
+                        <td>{{data.streetAddress}}</td>
+                        <td>{{data.addressLine2}}</td>
+                        <td>{{data.city}}</td>
+                        <td>{{data.state}}</td>
+                        <td>{{data.country}}</td>
+                        <td><button type="submit" class="btn btn-outline-danger" (click)='delete(data)'>Delete</button></td>
+                        <td><button type="submit" class="btn btn-outline-info" (click)='update(data)'>Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <div class=" mt-4 mb-4" id="ty-pagination">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div> -->
+    </body>
+</html>
